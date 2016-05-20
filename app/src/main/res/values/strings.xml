@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecyclerViewGestures</string>
+
+    <string name="swipe_in">Swipe in</string>
+    <string name="swipe_under">Swipe under</string>
+
+    <string name="controls">Controls go here.</string>
+</resources>
