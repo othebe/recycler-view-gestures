@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,8 @@ import java.util.ArrayList;
  * Created by othebe on 5/20/16.
  */
 public abstract class SwiperFragment extends Fragment {
-    private RecyclerView recyclerView;
+    protected RecyclerView recyclerView;
+
     private LinearLayoutManager recyclerViewLayoutManager;
     private RecyclerViewAdapter recyclerViewAdapter;
 
