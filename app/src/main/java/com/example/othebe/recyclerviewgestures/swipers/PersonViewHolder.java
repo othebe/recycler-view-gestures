@@ -13,14 +13,26 @@ import com.example.othebe.recyclerviewgestures.models.Person;
  */
 public class PersonViewHolder extends RecyclerView.ViewHolder {
     private TextView nameTv;
+    private boolean isMarked;
 
     public PersonViewHolder(View view) {
         super(view);
 
+        isMarked = false;
         nameTv = (TextView) view.findViewById(R.id.person_item__name);
     }
 
     public void setPerson(Person person) {
         nameTv.setText(person.name);
+    }
+
+    public void mark() {
+        View v = itemView.findViewById(R.id.person_swipe_under_item__person);
+        v.setBackgroundColor(Color.GRAY);
+        isMarked = true;
+    }
+
+    public boolean isMarked() {
+        return isMarked;
     }
 }

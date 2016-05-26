@@ -2,6 +2,7 @@ package com.example.othebe.recyclerviewgestures.swipers.swipe_under;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
@@ -31,11 +32,7 @@ public class SwipeUnderFragment extends SwiperFragment implements ITouchCallback
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView.addOnItemTouchListener(new SwipeUnderOnTouchListener());
-
-//        SwipeUnderItemTouchHelperCallback itemTouchHelperCallback = new SwipeUnderItemTouchHelperCallback(this);
-//        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(itemTouchHelperCallback);
-//        itemTouchHelper.attachToRecyclerView(recyclerView);
+        recyclerView.addOnItemTouchListener(new SwipeUnderOnTouchListener(adapter));
     }
 
     @Override

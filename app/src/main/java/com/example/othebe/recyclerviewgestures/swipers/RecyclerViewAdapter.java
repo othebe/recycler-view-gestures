@@ -29,4 +29,18 @@ public abstract class RecyclerViewAdapter<T> extends RecyclerView.Adapter<Person
         this.persons = persons;
         notifyDataSetChanged();
     }
+
+    public Person getDataAt(int position) {
+        return persons.get(position);
+    }
+
+    public void removeDataAt(int position) {
+        persons.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void addDataAt(Person person, int position) {
+        persons.add(position, person);
+        notifyItemInserted(position);
+    }
 }
